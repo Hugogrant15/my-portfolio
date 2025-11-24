@@ -142,7 +142,7 @@ const Portfolio = () => {
       title: "Organic Snack E-Commerce",
       description: "High-performance B2C platform. Features a custom cart engine, seasonal pricing logic, and Paystack integration.",
       stack: ["React", "Express", "Node.js", "MongoDb", "Paystack"],
-      link: "https://github.com/Hugogrant15/amazon-food-landing-page.git",
+      link: "https://project-amazon-food-design.vercel.app/",
       highlight: "Dynamic Pricing Engine",
       image: "/project-shop.png"
     },
