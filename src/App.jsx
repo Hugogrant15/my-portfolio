@@ -205,9 +205,14 @@ const Portfolio = () => {
                >
                   <Mail size={18} /> Contact Me
                </button>
-               <a href="#" className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl font-medium transition-all flex items-center gap-2 hover:scale-105 active:scale-95">
-                  <Download size={18} /> Resume
-               </a>
+              {/* Resume Button */}
+<a 
+  href="/cv.pdf" 
+  download="Ugochukwu_CV.pdf"  // <--- THIS IS THE MAGIC FIX
+  className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl font-medium transition-all flex items-center gap-2 hover:scale-105 active:scale-95"
+>
+  <Download size={18} /> Resume
+</a>
             </motion.div>
           </div>
 
