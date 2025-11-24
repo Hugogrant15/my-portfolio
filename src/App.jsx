@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import ContactModal from './components/ContactModal';
+import ContactModal from './components/ContactModal'; // Kept your specific path
+import TechMarquee from './components/TechMarquee';   // <--- NEW IMPORT
+import ProcessSection from './components/ProcessSection'; // <--- NEW IMPORT
 import { Github, Linkedin, Mail, ExternalLink, ArrowUpRight, Database, Download, Terminal, Cpu, Globe, Server, Code, MapPin, Clock, Zap, X, Send, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
@@ -205,14 +207,13 @@ const Portfolio = () => {
                >
                   <Mail size={18} /> Contact Me
                </button>
-              {/* Resume Button */}
-<a 
-  href="/cv.pdf" 
-  download="Ugochukwu_CV.pdf"  // <--- THIS IS THE MAGIC FIX
-  className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl font-medium transition-all flex items-center gap-2 hover:scale-105 active:scale-95"
->
-  <Download size={18} /> Resume
-</a>
+               <a 
+                  href="/cv.pdf" 
+                  download="Ugochukwu_CV.pdf" 
+                  className="px-6 py-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white rounded-xl font-medium transition-all flex items-center gap-2 hover:scale-105 active:scale-95"
+               >
+                  <Download size={18} /> Resume
+               </a>
             </motion.div>
           </div>
 
@@ -247,6 +248,11 @@ const Portfolio = () => {
             </TiltCard>
           </motion.div>
         </motion.div>
+
+        {/* --- ADDED: INFINITE TECH MARQUEE --- */}
+        <div className="mb-24">
+           <TechMarquee />
+        </div>
 
         {/* --- NAVIGATION --- */}
         <div className="flex justify-center md:justify-start gap-8 border-b border-slate-800 mb-12">
@@ -326,9 +332,9 @@ const Portfolio = () => {
             <motion.div
               key="about"
               initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }}
-              className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-4 h-auto md:h-[500px]"
+              className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[500px]"
             >
-              {/* Card 1: The Bio */}
+              {/* Bio Card */}
               <BentoCard className="md:col-span-2 md:row-span-2 flex flex-col justify-center">
                 <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-400 mb-4">
                   <Terminal size={24} />
@@ -345,7 +351,7 @@ const Portfolio = () => {
                 </div>
               </BentoCard>
 
-              {/* Card 2: Location & Time */}
+              {/* Location Card */}
               <BentoCard className="flex flex-col justify-between">
                 <div className="flex justify-between items-start">
                    <MapPin className="text-teal-400" />
@@ -359,7 +365,7 @@ const Portfolio = () => {
                 </div>
               </BentoCard>
 
-              {/* Card 3: Stack Scroller */}
+              {/* Code Visual Card */}
               <TiltCard className="h-full w-full bg-slate-900 rounded-3xl border border-slate-700 p-6 relative overflow-hidden group">
                   <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light rounded-3xl"></div>
                   
@@ -394,6 +400,10 @@ const Portfolio = () => {
           )}
 
         </AnimatePresence>
+
+        {/* --- ADDED: PROCESS SECTION --- */}
+        <ProcessSection />
+
       </div>
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
