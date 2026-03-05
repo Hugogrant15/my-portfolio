@@ -4,7 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Apply the font */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #14b8a6;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2dd4bf;
 }
