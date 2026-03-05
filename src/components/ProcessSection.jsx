@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import { Search, PenTool, Code, Rocket, Repeat } from "lucide-react";
 
 const steps = [

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
+
 const TechMarquee = () => {
   const techStack = [
     "React",

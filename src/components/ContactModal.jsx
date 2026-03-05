@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { X, Send, Loader2 } from "lucide-react";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion"; // eslint-disable-line no-unused-vars
 
 const ContactModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({

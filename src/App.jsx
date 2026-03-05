@@ -31,6 +31,7 @@ const LinkedInIcon = ({ size = 24 }) => (
   </svg>
 );
 import {
+  motion, // eslint-disable-line no-unused-vars
   AnimatePresence,
   useMotionValue,
   useSpring,
